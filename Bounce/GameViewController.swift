@@ -1,60 +1,49 @@
-//
-//  GameViewController.swift
-//  Bounce
-//
-//  Created by Kevin Finn on 4/25/19.
-//  Copyright © 2019 heptarex. All rights reserved.
-//
-
 import UIKit
 import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
-        // including entities and graphs.
-        if let scene = GKScene(fileNamed: "GameScene") {
-            
-            // Get the SKScene from the loaded GKScene
-            if let sceneNode = scene.rootNode as! GameScene? {
-                
-                // Copy gameplay related content over to the scene
-                sceneNode.entities = scene.entities
-                sceneNode.graphs = scene.graphs
-                
-                // Set the scale mode to scale to fit the window
-                sceneNode.scaleMode = .aspectFill
-                
-                // Present the scene
-                if let view = self.view as! SKView? {
-                    view.presentScene(sceneNode)
-                    
-                    view.ignoresSiblingOrder = true
-                    
-                    view.showsFPS = true
-                    view.showsNodeCount = true
-                }
-            }
-        }
+  
+  lazy var scene = GameScene()
+  lazy var skView: SKView = {
+    let result = SKView()
+    result.translatesAutoresizingMaskIntoConstraints = false
+    return result
+  }()
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    view.addSubview(skView)
+    view.addConstraints([
+      NSLayoutConstraint(item: skView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 0),
+      NSLayoutConstraint(item: skView, attribute: .right, relatedBy: .equal, toItem: view, attribute: .right, multiplier: 1, constant: 0),
+      NSLayoutConstraint(item: skView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: 0),
+      NSLayoutConstraint(item: skView, attribute: .left, relatedBy: .equal, toItem: view, attribute: .left, multiplier: 1, constant: 0)
+    ])
+    
+    skView.presentScene(scene)
+    skView.showsFPS = true
+    skView.showsNodeCount = true
+  }
+  
+  override var shouldAutorotate: Bool {
+    return true
+  }
+  
+  override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    if UIDevice.current.userInterfaceIdiom == .phone {
+      return .allButUpsideDown
+    } else {
+      return .all
     }
-
-    override var shouldAutorotate: Bool {
-        return true
-    }
-
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            return .allButUpsideDown
-        } else {
-            return .all
-        }
-    }
-
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
+  }
+  
+  override var prefersStatusBarHidden: Bool {
+    return true
+  }
+  
+  override func viewDidLayoutSubviews() {
+    scene.size = skView.bounds.size
+  }
 }
