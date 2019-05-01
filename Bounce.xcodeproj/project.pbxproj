@@ -14,6 +14,8 @@
 		0A9997B92279137000F13A31 /* CGVector+Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9997B82279137000F13A31 /* CGVector+Geometry.swift */; };
 		0A9997BD22791DA400F13A31 /* PathEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9997BC22791DA400F13A31 /* PathEvent.swift */; };
 		0A9997C12279519100F13A31 /* kick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0A9997C02279519100F13A31 /* kick.wav */; };
+		0A9997C62279549800F13A31 /* Level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A9997C52279549800F13A31 /* Level1.json */; };
+		0A9997C82279560F00F13A31 /* LevelDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9997C72279560F00F13A31 /* LevelDefinition.swift */; };
 		0AF2FFBA22724C8C0063888C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2FFB922724C8C0063888C /* AppDelegate.swift */; };
 		0AF2FFC022724C8C0063888C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2FFBF22724C8C0063888C /* GameScene.swift */; };
 		0AF2FFC222724C8C0063888C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2FFC122724C8C0063888C /* GameViewController.swift */; };
@@ -48,6 +50,8 @@
 		0A9997B82279137000F13A31 /* CGVector+Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGVector+Geometry.swift"; sourceTree = "<group>"; };
 		0A9997BC22791DA400F13A31 /* PathEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathEvent.swift; sourceTree = "<group>"; };
 		0A9997C02279519100F13A31 /* kick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = kick.wav; sourceTree = "<group>"; };
+		0A9997C52279549800F13A31 /* Level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Level1.json; sourceTree = "<group>"; };
+		0A9997C72279560F00F13A31 /* LevelDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelDefinition.swift; sourceTree = "<group>"; };
 		0AF2FFB622724C8C0063888C /* Bounce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bounce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF2FFB922724C8C0063888C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AF2FFBF22724C8C0063888C /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -88,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A9997C2227953B300F13A31 /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				0A9997C52279549800F13A31 /* Level1.json */,
+			);
+			path = Levels;
+			sourceTree = "<group>";
+		};
 		0AF2FFAD22724C8C0063888C = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +123,7 @@
 		0AF2FFB822724C8C0063888C /* Bounce */ = {
 			isa = PBXGroup;
 			children = (
+				0A9997C2227953B300F13A31 /* Levels */,
 				0AF2FFCB22724C8E0063888C /* Info.plist */,
 				0AF2FFB922724C8C0063888C /* AppDelegate.swift */,
 				0A9997B022790A3200F13A31 /* Ball.swift */,
@@ -118,6 +131,7 @@
 				0A9997B82279137000F13A31 /* CGVector+Geometry.swift */,
 				0AF2FFBF22724C8C0063888C /* GameScene.swift */,
 				0AF2FFC122724C8C0063888C /* GameViewController.swift */,
+				0A9997C72279560F00F13A31 /* LevelDefinition.swift */,
 				0A9997B222790BF300F13A31 /* Obstacle.swift */,
 				0A9997B62279110B00F13A31 /* Path.swift */,
 				0A9997BC22791DA400F13A31 /* PathEvent.swift */,
@@ -253,6 +267,7 @@
 				0AF2FFC722724C8E0063888C /* Assets.xcassets in Resources */,
 				0AF2FFCA22724C8E0063888C /* LaunchScreen.storyboard in Resources */,
 				0A9997C12279519100F13A31 /* kick.wav in Resources */,
+				0A9997C62279549800F13A31 /* Level1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +300,7 @@
 				0AF2FFC222724C8C0063888C /* GameViewController.swift in Sources */,
 				0A9997B92279137000F13A31 /* CGVector+Geometry.swift in Sources */,
 				0AF2FFBA22724C8C0063888C /* AppDelegate.swift in Sources */,
+				0A9997C82279560F00F13A31 /* LevelDefinition.swift in Sources */,
 				0A9997BD22791DA400F13A31 /* PathEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -32,7 +32,7 @@ class Ball: SKNode {
       run(Ball.BOUNCE_SOUND_ACTION)
       while path!.end.time < to {
         if let obstacle = path!.end.collisionTarget as? Obstacle {
-          obstacle.handleCollision()
+          obstacle.handleCollision(ball: self)
         }
         path = path!.next(ball: self)
       }

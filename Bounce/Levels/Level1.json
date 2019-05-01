@@ -1,0 +1,34 @@
+{
+  "balls": [
+    {
+      "initialPosition": [100, 100],
+      "initialDirection": [2, 1]
+    },
+    {
+      "initialPosition": [200, 100],
+      "initialDirection": [1, 3]
+    }
+  ],
+  "obstacles": [
+    {
+      "position": [75, 500],
+      "size": [150, 50]
+    },
+    {
+      "position": [225, 500],
+      "size": [150, 50]
+    },
+    {
+      "position": [75, 400],
+      "size": [150, 50]
+    },
+    {
+      "position": [225, 400],
+      "size": [150, 50]
+    },
+    {
+      "position": [150, 300],
+      "size": [150, 50]
+    }
+  ]
+}

@@ -43,7 +43,7 @@ class Obstacle: SKNode {
     fatalError("init(coder:) has not been implemented")
   }
 
-  func handleCollision() {
+  func handleCollision(ball: Ball) {
     health -= 1
     
     if health <= 0 {
