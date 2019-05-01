@@ -8,9 +8,7 @@ class GameScene: SKScene {
   override func sceneDidLoad() {
     self.physicsBody = SKPhysicsBody(edgeLoopFrom: self.frame)
     addBall(initialPosition: CGPoint(x: 100, y: 100), initialDirection: CGVector.init(dx: 2, dy: 1))
-    addBall(initialPosition: CGPoint(x: 200, y: 200), initialDirection: CGVector.init(dx: 2, dy: 3))
     addBall(initialPosition: CGPoint(x: 200, y: 100), initialDirection: CGVector.init(dx: 1, dy: 3))
-    addBall(initialPosition: CGPoint(x: 100, y: 200), initialDirection: CGVector.init(dx: 7, dy: 3))
     
     addChild({
       let obstacle = Obstacle(size: CGSize(width: 150, height: 50))

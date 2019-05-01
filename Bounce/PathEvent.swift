@@ -1,6 +1,8 @@
 import SpriteKit
 
-let BALL_SPEED: CGFloat = 1000
+let BALL_SPEED: CGFloat = 700
+let BEATS_PER_MINUTE = 180.0
+let BEAT_DURATION_SECONDS = (60.0 / 180.0)
 
 struct Intersection {
   let body: SKPhysicsBody
@@ -29,8 +31,13 @@ struct PathEvent {
       }
     }
     
+    let arrhythmicTime = time + TimeInterval(nearestIntersection!.distance / BALL_SPEED)
+    let rhythmicTime = max(
+      round(arrhythmicTime / BEAT_DURATION_SECONDS) * BEAT_DURATION_SECONDS,
+      time + BEAT_DURATION_SECONDS
+    )
     return PathEvent(
-      time: time + TimeInterval(nearestIntersection!.distance / BALL_SPEED),
+      time: rhythmicTime,
       position: nearestIntersection!.point - direction.unit,
       direction: direction.reflectedAcross(normal: nearestIntersection!.normal),
       collisionTarget: nearestIntersection!.body.node

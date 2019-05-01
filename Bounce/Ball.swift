@@ -3,6 +3,8 @@ import SpriteKit
 let BALL_RADIUS: CGFloat = 10
 
 class Ball: SKNode {
+  static let BOUNCE_SOUND_ACTION = SKAction.playSoundFileNamed("kick", waitForCompletion: false)
+  
   let appearanceNode: SKNode = {
     let appearanceNode = SKShapeNode(circleOfRadius: BALL_RADIUS)
     appearanceNode.fillColor = UIColor.black
@@ -27,6 +29,7 @@ class Ball: SKNode {
     if path == nil {
       path = Path.build(ball: self, startingAt: to)
     } else if path!.end.time < to {
+      run(Ball.BOUNCE_SOUND_ACTION)
       while path!.end.time < to {
         if let obstacle = path!.end.collisionTarget as? Obstacle {
           obstacle.handleCollision()
