@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A9997B122790A3200F13A31 /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9997B022790A3200F13A31 /* Ball.swift */; };
+		0A9997B322790BF300F13A31 /* Obstacle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9997B222790BF300F13A31 /* Obstacle.swift */; };
+		0A9997B522790E5D00F13A31 /* CGPoint+Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9997B422790E5D00F13A31 /* CGPoint+Geometry.swift */; };
+		0A9997B72279110B00F13A31 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9997B62279110B00F13A31 /* Path.swift */; };
+		0A9997B92279137000F13A31 /* CGVector+Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9997B82279137000F13A31 /* CGVector+Geometry.swift */; };
+		0A9997BD22791DA400F13A31 /* PathEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9997BC22791DA400F13A31 /* PathEvent.swift */; };
 		0AF2FFBA22724C8C0063888C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2FFB922724C8C0063888C /* AppDelegate.swift */; };
 		0AF2FFC022724C8C0063888C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2FFBF22724C8C0063888C /* GameScene.swift */; };
 		0AF2FFC222724C8C0063888C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2FFC122724C8C0063888C /* GameViewController.swift */; };
@@ -34,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A9997B022790A3200F13A31 /* Ball.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
+		0A9997B222790BF300F13A31 /* Obstacle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obstacle.swift; sourceTree = "<group>"; };
+		0A9997B422790E5D00F13A31 /* CGPoint+Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Geometry.swift"; sourceTree = "<group>"; };
+		0A9997B62279110B00F13A31 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		0A9997B82279137000F13A31 /* CGVector+Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGVector+Geometry.swift"; sourceTree = "<group>"; };
+		0A9997BC22791DA400F13A31 /* PathEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathEvent.swift; sourceTree = "<group>"; };
 		0AF2FFB622724C8C0063888C /* Bounce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bounce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF2FFB922724C8C0063888C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AF2FFBF22724C8C0063888C /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -97,12 +109,18 @@
 		0AF2FFB822724C8C0063888C /* Bounce */ = {
 			isa = PBXGroup;
 			children = (
+				0AF2FFCB22724C8E0063888C /* Info.plist */,
 				0AF2FFB922724C8C0063888C /* AppDelegate.swift */,
+				0A9997B022790A3200F13A31 /* Ball.swift */,
+				0A9997B422790E5D00F13A31 /* CGPoint+Geometry.swift */,
+				0A9997B82279137000F13A31 /* CGVector+Geometry.swift */,
 				0AF2FFBF22724C8C0063888C /* GameScene.swift */,
 				0AF2FFC122724C8C0063888C /* GameViewController.swift */,
+				0A9997B222790BF300F13A31 /* Obstacle.swift */,
+				0A9997B62279110B00F13A31 /* Path.swift */,
+				0A9997BC22791DA400F13A31 /* PathEvent.swift */,
 				0AF2FFC622724C8E0063888C /* Assets.xcassets */,
 				0AF2FFC822724C8E0063888C /* LaunchScreen.storyboard */,
-				0AF2FFCB22724C8E0063888C /* Info.plist */,
 			);
 			path = Bounce;
 			sourceTree = "<group>";
@@ -256,8 +274,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AF2FFC022724C8C0063888C /* GameScene.swift in Sources */,
+				0A9997B72279110B00F13A31 /* Path.swift in Sources */,
+				0A9997B522790E5D00F13A31 /* CGPoint+Geometry.swift in Sources */,
+				0A9997B122790A3200F13A31 /* Ball.swift in Sources */,
+				0A9997B322790BF300F13A31 /* Obstacle.swift in Sources */,
 				0AF2FFC222724C8C0063888C /* GameViewController.swift in Sources */,
+				0A9997B92279137000F13A31 /* CGVector+Geometry.swift in Sources */,
 				0AF2FFBA22724C8C0063888C /* AppDelegate.swift in Sources */,
+				0A9997BD22791DA400F13A31 /* PathEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
