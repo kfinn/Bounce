@@ -28,6 +28,9 @@ class Ball: SKNode {
       path = Path.build(ball: self, startingAt: to)
     } else if path!.end.time < to {
       while path!.end.time < to {
+        if let obstacle = path!.end.collisionTarget as? Obstacle {
+          obstacle.handleCollision()
+        }
         path = path!.next(ball: self)
       }
     }

@@ -13,7 +13,7 @@ struct Path {
   }
   
   static func build(ball: Ball, startingAt: TimeInterval) -> Path {
-    let start = PathEvent(time: startingAt, position: ball.position, direction: ball.initialDirection)
+    let start = PathEvent(time: startingAt, position: ball.position, direction: ball.initialDirection, collisionTarget: nil)
     let end = start.next(ball: ball)
     return Path(start: start, end: end)
   }

@@ -13,6 +13,7 @@ struct PathEvent {
   let time: TimeInterval
   let position: CGPoint
   let direction: CGVector
+  let collisionTarget: SKNode?
   
   func next(ball: Ball) -> PathEvent {
     let physicsWorld = ball.scene!.physicsWorld
@@ -31,7 +32,8 @@ struct PathEvent {
     return PathEvent(
       time: time + TimeInterval(nearestIntersection!.distance / BALL_SPEED),
       position: nearestIntersection!.point - direction.unit,
-      direction: direction.reflectedAcross(normal: nearestIntersection!.normal)
+      direction: direction.reflectedAcross(normal: nearestIntersection!.normal),
+      collisionTarget: nearestIntersection!.body.node
     )
   }
 }

@@ -11,6 +11,32 @@ class GameScene: SKScene {
     addBall(initialPosition: CGPoint(x: 200, y: 200), initialDirection: CGVector.init(dx: 2, dy: 3))
     addBall(initialPosition: CGPoint(x: 200, y: 100), initialDirection: CGVector.init(dx: 1, dy: 3))
     addBall(initialPosition: CGPoint(x: 100, y: 200), initialDirection: CGVector.init(dx: 7, dy: 3))
+    
+    addChild({
+      let obstacle = Obstacle(size: CGSize(width: 150, height: 50))
+      obstacle.position = CGPoint(x: 75, y: 500)
+      return obstacle
+    }())
+    addChild({
+      let obstacle = Obstacle(size: CGSize(width: 150, height: 50))
+      obstacle.position = CGPoint(x: 225, y: 500)
+      return obstacle
+      }())
+    addChild({
+      let obstacle = Obstacle(size: CGSize(width: 150, height: 50))
+      obstacle.position = CGPoint(x: 75, y: 400)
+      return obstacle
+      }())
+    addChild({
+      let obstacle = Obstacle(size: CGSize(width: 150, height: 50))
+      obstacle.position = CGPoint(x: 225, y: 400)
+      return obstacle
+      }())
+    addChild({
+      let obstacle = Obstacle(size: CGSize(width: 150, height: 50))
+      obstacle.position = CGPoint(x: 150, y: 300)
+      return obstacle
+      }())
   }
   
   override func didChangeSize(_ oldSize: CGSize) {
