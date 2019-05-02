@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A9997B122790A3200F13A31 /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9997B022790A3200F13A31 /* Ball.swift */; };
-		0A9997B322790BF300F13A31 /* Obstacle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9997B222790BF300F13A31 /* Obstacle.swift */; };
+		0A9997B322790BF300F13A31 /* Brick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9997B222790BF300F13A31 /* Brick.swift */; };
 		0A9997B522790E5D00F13A31 /* CGPoint+Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9997B422790E5D00F13A31 /* CGPoint+Geometry.swift */; };
 		0A9997B72279110B00F13A31 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9997B62279110B00F13A31 /* Path.swift */; };
 		0A9997B92279137000F13A31 /* CGVector+Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9997B82279137000F13A31 /* CGVector+Geometry.swift */; };
@@ -16,6 +16,8 @@
 		0A9997C12279519100F13A31 /* kick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0A9997C02279519100F13A31 /* kick.wav */; };
 		0A9997C62279549800F13A31 /* Level1.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A9997C52279549800F13A31 /* Level1.json */; };
 		0A9997C82279560F00F13A31 /* LevelDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9997C72279560F00F13A31 /* LevelDefinition.swift */; };
+		0A9997CA227A699600F13A31 /* Trap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9997C9227A699600F13A31 /* Trap.swift */; };
+		0A9997CC227A6BC800F13A31 /* Obstacle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9997CB227A6BC800F13A31 /* Obstacle.swift */; };
 		0AF2FFBA22724C8C0063888C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2FFB922724C8C0063888C /* AppDelegate.swift */; };
 		0AF2FFC022724C8C0063888C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2FFBF22724C8C0063888C /* GameScene.swift */; };
 		0AF2FFC222724C8C0063888C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2FFC122724C8C0063888C /* GameViewController.swift */; };
@@ -44,7 +46,7 @@
 
 /* Begin PBXFileReference section */
 		0A9997B022790A3200F13A31 /* Ball.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
-		0A9997B222790BF300F13A31 /* Obstacle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obstacle.swift; sourceTree = "<group>"; };
+		0A9997B222790BF300F13A31 /* Brick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brick.swift; sourceTree = "<group>"; };
 		0A9997B422790E5D00F13A31 /* CGPoint+Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Geometry.swift"; sourceTree = "<group>"; };
 		0A9997B62279110B00F13A31 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		0A9997B82279137000F13A31 /* CGVector+Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGVector+Geometry.swift"; sourceTree = "<group>"; };
@@ -52,6 +54,8 @@
 		0A9997C02279519100F13A31 /* kick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = kick.wav; sourceTree = "<group>"; };
 		0A9997C52279549800F13A31 /* Level1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Level1.json; sourceTree = "<group>"; };
 		0A9997C72279560F00F13A31 /* LevelDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelDefinition.swift; sourceTree = "<group>"; };
+		0A9997C9227A699600F13A31 /* Trap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trap.swift; sourceTree = "<group>"; };
+		0A9997CB227A6BC800F13A31 /* Obstacle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obstacle.swift; sourceTree = "<group>"; };
 		0AF2FFB622724C8C0063888C /* Bounce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bounce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF2FFB922724C8C0063888C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AF2FFBF22724C8C0063888C /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -132,7 +136,9 @@
 				0AF2FFBF22724C8C0063888C /* GameScene.swift */,
 				0AF2FFC122724C8C0063888C /* GameViewController.swift */,
 				0A9997C72279560F00F13A31 /* LevelDefinition.swift */,
-				0A9997B222790BF300F13A31 /* Obstacle.swift */,
+				0A9997B222790BF300F13A31 /* Brick.swift */,
+				0A9997CB227A6BC800F13A31 /* Obstacle.swift */,
+				0A9997C9227A699600F13A31 /* Trap.swift */,
 				0A9997B62279110B00F13A31 /* Path.swift */,
 				0A9997BC22791DA400F13A31 /* PathEvent.swift */,
 				0A9997C02279519100F13A31 /* kick.wav */,
@@ -294,12 +300,14 @@
 			files = (
 				0AF2FFC022724C8C0063888C /* GameScene.swift in Sources */,
 				0A9997B72279110B00F13A31 /* Path.swift in Sources */,
+				0A9997CC227A6BC800F13A31 /* Obstacle.swift in Sources */,
 				0A9997B522790E5D00F13A31 /* CGPoint+Geometry.swift in Sources */,
 				0A9997B122790A3200F13A31 /* Ball.swift in Sources */,
-				0A9997B322790BF300F13A31 /* Obstacle.swift in Sources */,
+				0A9997B322790BF300F13A31 /* Brick.swift in Sources */,
 				0AF2FFC222724C8C0063888C /* GameViewController.swift in Sources */,
 				0A9997B92279137000F13A31 /* CGVector+Geometry.swift in Sources */,
 				0AF2FFBA22724C8C0063888C /* AppDelegate.swift in Sources */,
+				0A9997CA227A699600F13A31 /* Trap.swift in Sources */,
 				0A9997C82279560F00F13A31 /* LevelDefinition.swift in Sources */,
 				0A9997BD22791DA400F13A31 /* PathEvent.swift in Sources */,
 			);

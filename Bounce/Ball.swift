@@ -26,18 +26,20 @@ class Ball: SKNode {
   }
   
   func update(from: TimeInterval, to: TimeInterval) {
+    var collisions = [Obstacle]()
     if path == nil {
       path = Path.build(ball: self, startingAt: to)
     } else if path!.end.time < to {
       run(Ball.BOUNCE_SOUND_ACTION)
       while path!.end.time < to {
         if let obstacle = path!.end.collisionTarget as? Obstacle {
-          obstacle.handleCollision(ball: self)
+          collisions.append(obstacle)
         }
         path = path!.next(ball: self)
       }
     }
     
+    collisions.forEach { $0.handleCollision(ball: self) }
     position = path!.positionAt(timeInterval: to)
   }
 }

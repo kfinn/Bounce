@@ -9,7 +9,7 @@
       "initialDirection": [1, 3]
     }
   ],
-  "obstacles": [
+  "bricks": [
     {
       "position": [75, 500],
       "size": [150, 50]

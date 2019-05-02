@@ -4,6 +4,7 @@ import GameplayKit
 class GameScene: SKScene {
   private var lastUpdateTime : TimeInterval?
   private var balls = [Ball]()
+  private lazy var trap = Trap()
   
   override func sceneDidLoad() {
     self.physicsBody = SKPhysicsBody(edgeLoopFrom: self.frame)
@@ -16,20 +17,28 @@ class GameScene: SKScene {
       ball.position = ballDefinition.initialPosition
       add(ball: ball)
     }
-    level.obstacles.forEach { (obstacleDefinition) in
-      let obstacle = Obstacle(size: obstacleDefinition.size)
-      obstacle.position = obstacleDefinition.position
-      addChild(obstacle)
-    }    
+    level.bricks.forEach { (brickDefinition) in
+      let brick = Brick(size: brickDefinition.size)
+      brick.position = brickDefinition.position
+      addChild(brick)
+    }
+    addChild(trap)
   }
   
   override func didChangeSize(_ oldSize: CGSize) {
     self.physicsBody = SKPhysicsBody(edgeLoopFrom: self.frame)
+    self.trap.size = CGSize(width: self.size.width, height: 80)
+    self.trap.position = CGPoint(x: 0, y: 0)
   }
   
   func add(ball: Ball) {
     addChild(ball)
     balls.append(ball)
+  }
+  
+  func destroy(ball: Ball) {
+    ball.removeFromParent()
+    balls.removeAll { ball == $0 }
   }
   
   override func update(_ currentTime: TimeInterval) {

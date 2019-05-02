@@ -5,12 +5,12 @@ struct BallDefinition: Decodable {
   let initialDirection: CGVector
 }
 
-struct ObstacleDefinition: Decodable {
+struct BrickDefinition: Decodable {
   let position: CGPoint
   let size: CGSize
 }
 
 struct LevelDefinition: Decodable {
   let balls: [BallDefinition]
-  let obstacles: [ObstacleDefinition]
+  let bricks: [BrickDefinition]
 }
