@@ -46,6 +46,7 @@ class GameScene: SKScene {
       balls.forEach { (ball) in
         ball.update(from: from, to: currentTime)
       }
+      trap.update(from: from, to: currentTime)
     }
     self.lastUpdateTime = currentTime
   }

@@ -1,8 +1,6 @@
 import SpriteKit
 
-let BALL_SPEED: CGFloat = 700
-let BEATS_PER_MINUTE = 180.0
-let BEAT_DURATION_SECONDS = (60.0 / 180.0)
+let BALL_SPEED: CGFloat = 500
 
 struct Intersection {
   let body: SKPhysicsBody

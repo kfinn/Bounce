@@ -18,6 +18,8 @@
 		0A9997C82279560F00F13A31 /* LevelDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9997C72279560F00F13A31 /* LevelDefinition.swift */; };
 		0A9997CA227A699600F13A31 /* Trap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9997C9227A699600F13A31 /* Trap.swift */; };
 		0A9997CC227A6BC800F13A31 /* Obstacle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9997CB227A6BC800F13A31 /* Obstacle.swift */; };
+		0A9997CE227A949500F13A31 /* TimeInterval+Beat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9997CD227A949500F13A31 /* TimeInterval+Beat.swift */; };
+		0A9997D0227A94D500F13A31 /* BeatInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9997CF227A94D500F13A31 /* BeatInterval.swift */; };
 		0AF2FFBA22724C8C0063888C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2FFB922724C8C0063888C /* AppDelegate.swift */; };
 		0AF2FFC022724C8C0063888C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2FFBF22724C8C0063888C /* GameScene.swift */; };
 		0AF2FFC222724C8C0063888C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2FFC122724C8C0063888C /* GameViewController.swift */; };
@@ -56,6 +58,8 @@
 		0A9997C72279560F00F13A31 /* LevelDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelDefinition.swift; sourceTree = "<group>"; };
 		0A9997C9227A699600F13A31 /* Trap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trap.swift; sourceTree = "<group>"; };
 		0A9997CB227A6BC800F13A31 /* Obstacle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obstacle.swift; sourceTree = "<group>"; };
+		0A9997CD227A949500F13A31 /* TimeInterval+Beat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Beat.swift"; sourceTree = "<group>"; };
+		0A9997CF227A94D500F13A31 /* BeatInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeatInterval.swift; sourceTree = "<group>"; };
 		0AF2FFB622724C8C0063888C /* Bounce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bounce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF2FFB922724C8C0063888C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AF2FFBF22724C8C0063888C /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -139,6 +143,8 @@
 				0A9997B222790BF300F13A31 /* Brick.swift */,
 				0A9997CB227A6BC800F13A31 /* Obstacle.swift */,
 				0A9997C9227A699600F13A31 /* Trap.swift */,
+				0A9997CD227A949500F13A31 /* TimeInterval+Beat.swift */,
+				0A9997CF227A94D500F13A31 /* BeatInterval.swift */,
 				0A9997B62279110B00F13A31 /* Path.swift */,
 				0A9997BC22791DA400F13A31 /* PathEvent.swift */,
 				0A9997C02279519100F13A31 /* kick.wav */,
@@ -300,6 +306,7 @@
 			files = (
 				0AF2FFC022724C8C0063888C /* GameScene.swift in Sources */,
 				0A9997B72279110B00F13A31 /* Path.swift in Sources */,
+				0A9997CE227A949500F13A31 /* TimeInterval+Beat.swift in Sources */,
 				0A9997CC227A6BC800F13A31 /* Obstacle.swift in Sources */,
 				0A9997B522790E5D00F13A31 /* CGPoint+Geometry.swift in Sources */,
 				0A9997B122790A3200F13A31 /* Ball.swift in Sources */,
@@ -309,6 +316,7 @@
 				0AF2FFBA22724C8C0063888C /* AppDelegate.swift in Sources */,
 				0A9997CA227A699600F13A31 /* Trap.swift in Sources */,
 				0A9997C82279560F00F13A31 /* LevelDefinition.swift in Sources */,
+				0A9997D0227A94D500F13A31 /* BeatInterval.swift in Sources */,
 				0A9997BD22791DA400F13A31 /* PathEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

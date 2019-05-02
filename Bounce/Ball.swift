@@ -39,7 +39,7 @@ class Ball: SKNode {
       }
     }
     
-    collisions.forEach { $0.handleCollision(ball: self) }
+    collisions.forEach { $0.handleCollision(ball: self, at: to) }
     position = path!.positionAt(timeInterval: to)
   }
 }
